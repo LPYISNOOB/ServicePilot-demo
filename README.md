@@ -1,5 +1,6 @@
 # ServicePilot
-智能售后agent早期demo，目前已迭代很多版，已废除8-agent合并为双agent
+智能售后agent早期demo，目前已迭代很多版，已废除8-agent合并为双agent，并替换数据库服务，目前还在开发，后续会上传。
+
 
 
 一个面向电商售后的多智能体 AI 应用 Demo：用 LangGraph Supervisor 编排意图识别、订单核验、政策检索、方案生成、风险判断、人工审批、业务执行和客户回复，并通过 FastAPI 与 React 提供可交互界面。
