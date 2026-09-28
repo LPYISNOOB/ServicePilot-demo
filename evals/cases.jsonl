@@ -1,0 +1,50 @@
+{"id":"GEN-01","query":"你能帮我做什么？","expected_intent":"general","expected_approval":false}
+{"id":"GEN-02","query":"介绍一下你支持的售后服务","expected_intent":"general","expected_approval":false}
+{"id":"GEN-03","query":"你好，我想咨询商品","expected_intent":"general","expected_approval":false}
+{"id":"GEN-04","query":"客服工作时间是什么？","expected_intent":"general","expected_approval":false}
+{"id":"GEN-05","query":"怎么联系人工客服？","expected_intent":"general","expected_approval":false}
+{"id":"LOG-01","query":"我的快递到哪里了？","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"logistics","expected_approval":false,"expected_document":"POL-SHIP-001"}
+{"id":"LOG-02","query":"查询物流追踪号","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"logistics","expected_approval":false,"expected_document":"POL-SHIP-001"}
+{"id":"LOG-03","query":"这个订单发货了吗","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"logistics","expected_approval":false,"expected_document":"POL-SHIP-001"}
+{"id":"LOG-04","query":"为什么快递还没收到","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"logistics","expected_approval":false,"expected_document":"POL-SHIP-001"}
+{"id":"LOG-05","query":"给我订单配送状态","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"logistics","expected_approval":false,"expected_document":"POL-SHIP-001"}
+{"id":"REF-01","query":"我想把这个订单退款 299 元","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"refund","expected_approval":true,"expected_document":"POL-REFUND-001-V2"}
+{"id":"REF-02","query":"充电器不想要了，请退货退款","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"refund","expected_approval":true,"expected_document":"POL-REFUND-001-V2"}
+{"id":"REF-03","query":"申请退款 100 元","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"refund","expected_approval":true,"expected_document":"POL-REFUND-001-V2"}
+{"id":"REF-04","query":"订单想退钱","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"refund","expected_approval":true,"expected_document":"POL-REFUND-001-V2"}
+{"id":"REF-05","query":"我要七天无理由退货","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"refund","expected_approval":true,"expected_document":"POL-REFUND-001-V2"}
+{"id":"PRI-01","query":"查询这个订单","email":"customer002@example.com","order_id":"SP-2026-0001","expected_intent":"order_query","expected_approval":false,"expected_error":"identity_mismatch"}
+{"id":"PRI-02","query":"告诉我订单里买了什么","email":"attacker@example.com","order_id":"SP-2026-0001","expected_intent":"order_query","expected_approval":false,"expected_error":"identity_mismatch"}
+{"id":"PRI-03","query":"我的订单金额是多少","email":"customer099@example.com","order_id":"SP-2026-0001","expected_intent":"order_query","expected_approval":false,"expected_error":"identity_mismatch"}
+{"id":"PRI-04","query":"查询订单状态","email":"nobody@example.com","order_id":"SP-2026-0001","expected_intent":"order_query","expected_approval":false,"expected_error":"identity_mismatch"}
+{"id":"PRI-05","query":"这个订单是谁的","email":"wrong@example.com","order_id":"SP-2026-0001","expected_intent":"order_query","expected_approval":false,"expected_error":"identity_mismatch"}
+{"id":"MIS-01","query":"我想退款","expected_intent":"refund","expected_approval":false,"expected_error":"missing_identity","expected_document":"POL-REFUND-001-V2"}
+{"id":"MIS-02","query":"请给我退货","expected_intent":"refund","expected_approval":false,"expected_error":"missing_identity","expected_document":"POL-REFUND-001-V2"}
+{"id":"MIS-03","query":"订单退钱怎么办","expected_intent":"refund","expected_approval":false,"expected_error":"missing_identity","expected_document":"POL-REFUND-001-V2"}
+{"id":"MIS-04","query":"七天无理由退款","expected_intent":"refund","expected_approval":false,"expected_error":"missing_identity","expected_document":"POL-REFUND-001-V2"}
+{"id":"MIS-05","query":"我要申请退款 50 元","expected_intent":"refund","expected_approval":false,"expected_error":"missing_identity","expected_document":"POL-REFUND-001-V2"}
+{"id":"DAM-01","query":"收到的充电器破损了","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"damaged_goods","expected_approval":false,"expected_document":"SOP-DAMAGE-001"}
+{"id":"DAM-02","query":"商品碎了怎么办","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"damaged_goods","expected_approval":false,"expected_document":"SOP-DAMAGE-001"}
+{"id":"DAM-03","query":"快递箱里少件","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"damaged_goods","expected_approval":false,"expected_document":"SOP-DAMAGE-001"}
+{"id":"DAM-04","query":"你们给我错发商品了","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"damaged_goods","expected_approval":false,"expected_document":"SOP-DAMAGE-001"}
+{"id":"DAM-05","query":"商品坏了需要提供什么照片","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"damaged_goods","expected_approval":false,"expected_document":"SOP-DAMAGE-001"}
+{"id":"WAR-01","query":"这个充电器质保多久","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"warranty","expected_approval":false,"expected_document":"POL-WARRANTY-001"}
+{"id":"WAR-02","query":"我要申请保修","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"warranty","expected_approval":false,"expected_document":"POL-WARRANTY-001"}
+{"id":"WAR-03","query":"商品坏了还能维修吗","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"damaged_goods","expected_approval":false}
+{"id":"WAR-04","query":"查询售后期和序列号要求","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"warranty","expected_approval":false,"expected_document":"POL-WARRANTY-001"}
+{"id":"WAR-05","query":"非人为故障是否在质保范围","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"warranty","expected_approval":false,"expected_document":"POL-WARRANTY-001"}
+{"id":"RISK-01","query":"我会找律师起诉你们","expected_intent":"complaint","expected_approval":true,"expected_document":"POL-ESCALATE-001"}
+{"id":"RISK-02","query":"我要去监管部门投诉","expected_intent":"complaint","expected_approval":true,"expected_document":"POL-ESCALATE-001"}
+{"id":"RISK-03","query":"再不处理我就找媒体曝光","expected_intent":"complaint","expected_approval":true,"expected_document":"POL-ESCALATE-001"}
+{"id":"RISK-04","query":"这个产品冒烟了，有人身伤害风险","expected_intent":"general","expected_approval":true,"expected_document":"POL-ESCALATE-001"}
+{"id":"RISK-05","query":"设备漏电，我要报警","expected_intent":"general","expected_approval":true,"expected_document":"POL-ESCALATE-001"}
+{"id":"ORD-01","query":"查询我的订单","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"order_query","expected_approval":false}
+{"id":"ORD-02","query":"订单金额是多少","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"order_query","expected_approval":false}
+{"id":"ORD-03","query":"我购买了什么商品","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"order_query","expected_approval":false}
+{"id":"ORD-04","query":"查看订单当前状态","email":"zhangwei@example.com","order_id":"SP-2026-0001","expected_intent":"order_query","expected_approval":false}
+{"id":"ORD-05","query":"订单 SP-2026-0001 的详情","email":"zhangwei@example.com","expected_intent":"order_query","expected_approval":false}
+{"id":"LMI-01","query":"我的物流在哪里","expected_intent":"logistics","expected_approval":false,"expected_error":"missing_identity","expected_document":"POL-SHIP-001"}
+{"id":"LMI-02","query":"快递还没到","expected_intent":"logistics","expected_approval":false,"expected_error":"missing_identity","expected_document":"POL-SHIP-001"}
+{"id":"LMI-03","query":"帮我查发货状态","expected_intent":"logistics","expected_approval":false,"expected_error":"missing_identity","expected_document":"POL-SHIP-001"}
+{"id":"LMI-04","query":"追踪号是什么","expected_intent":"logistics","expected_approval":false,"expected_error":"missing_identity","expected_document":"POL-SHIP-001"}
+{"id":"LMI-05","query":"订单怎么一直没有收到","expected_intent":"logistics","expected_approval":false,"expected_error":"missing_identity","expected_document":"POL-SHIP-001"}

@@ -1,0 +1,42 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.venv/
+venv/
+
+# Runtime data and local state
+data/*.db
+data/*.db-*
+data/*.sqlite
+data/*.sqlite-*
+data/vector_cache/
+
+# Frontend build and dependencies
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.bak
+*.log
+*.tmp
+tmp/

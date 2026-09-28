@@ -1,0 +1,25 @@
+{
+  "approval": {
+    "refund_amount_threshold": 200.0,
+    "require_all_business_writes": true,
+    "require_all_compensation": true,
+    "require_high_risk_review": true
+  },
+  "risk": {
+    "high_keywords": [
+      "律师", "起诉", "监管", "消协", "媒体", "曝光",
+      "人身伤害", "起火", "冒烟", "漏电", "报警"
+    ],
+    "medium_intents": ["refund", "damaged_goods", "complaint", "warranty"]
+  },
+  "retrieval": {
+    "top_k": 3,
+    "minimum_score": 0.0,
+    "active_documents_only": true
+  },
+  "demo_data": {
+    "random_seed": 42,
+    "customer_count": 100,
+    "order_count": 500
+  }
+}

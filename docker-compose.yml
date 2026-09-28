@@ -1,0 +1,28 @@
+services:
+  servicepilot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NODE_IMAGE: ${NODE_IMAGE:-node:24-alpine}
+        PYTHON_IMAGE: ${PYTHON_IMAGE:-python:3.13-slim}
+    init: true
+    ports:
+      - "8000:8000"
+    environment:
+      SERVICEPILOT_MODEL_MODE: ${SERVICEPILOT_MODEL_MODE:-mock}
+      SERVICEPILOT_MODEL_NAME: ${SERVICEPILOT_MODEL_NAME:-}
+      SERVICEPILOT_API_KEY: ${SERVICEPILOT_API_KEY:-}
+      SERVICEPILOT_BASE_URL: ${SERVICEPILOT_BASE_URL:-}
+      SERVICEPILOT_DB_PATH: /app/runtime/servicepilot.db
+      SERVICEPILOT_CHECKPOINT_PATH: /app/runtime/checkpoints.db
+      SERVICEPILOT_CHECKPOINT_MODE: sqlite
+      LANGSMITH_TRACING: ${LANGSMITH_TRACING:-false}
+      LANGSMITH_API_KEY: ${LANGSMITH_API_KEY:-}
+      LANGSMITH_PROJECT: ${LANGSMITH_PROJECT:-servicepilot-local}
+    volumes:
+      - servicepilot-runtime:/app/runtime
+    restart: unless-stopped
+
+volumes:
+  servicepilot-runtime:
